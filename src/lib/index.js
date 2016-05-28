@@ -15,8 +15,7 @@ export default function bindActionDispatchers(actionCreators) {
     assert.isNotNumber(actionCreators)
     assert.isNotBoolean(actionCreators)
   }
-
   if(typeof actionCreators === 'function')
-    return (dispatch, ownProps) => actionCreators(ownProps)
-  return dispatch => bindActionCreators(actionCreators)
+    return (dispatch, ownProps) => bindActionCreators(actionCreators(ownProps), dispatch)
+  return dispatch => bindActionCreators(actionCreators, dispatch)
 }
