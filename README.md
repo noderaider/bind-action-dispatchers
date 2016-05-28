@@ -11,7 +11,7 @@
 
 ## How to use
 
-**actions.js - Your apps redux actions**
+**actionCreators.js - Your apps redux action creators**
 
 ```jsx
 export const hello = noun => ({ type: 'HELLO', payload: noun })
@@ -23,12 +23,12 @@ export const hello = noun => ({ type: 'HELLO', payload: noun })
 import React from 'react'
 import bindActionDispatchers from 'bind-action-dispatchers'
 import { routeActions } from 'react-router-redux'
-import * as appActions from './actions'
+import * as appActions from './actionCreators'
 
-const Foo = ({ routeActions ...appActions }) => (
+const Foo = ({ routeDispatchers, ...appDispatchers }) => (
   <div>
-    <button onClick={routeActions.push('/route')}>Route</button>
-    <button onClick={appActions.hello('world')}>Hello</button>
+    <button onClick={routeDispatchers.push('/route')}>Route</button>
+    <button onClick={appDispatchers.hello('world')}>Hello</button>
   </div>
 )
 
@@ -36,7 +36,9 @@ const Foo = ({ routeActions ...appActions }) => (
  * Group the action creator functions that you would normally pass to bindActionCreators
  */
 
-const actionCreators = { routeActions, ...appActions }
+const actionCreators =  { routeDispatchers: routeActions
+                        , ...appActions
+                        }
 
 /**
  * ALTERNATIVE
@@ -46,7 +48,9 @@ const actionCreators = { routeActions, ...appActions }
  * ownProps.
  */
 
-const actionCreators = ownProps => { routeActions, ...appActions(ownProps) }
+const actionCreators = ownProps =>  { routeDispatchers: routeActions
+                                    , ...appActions(ownProps)
+                                    }
 
 
 /** Now the connect function looks really simple and your component has 0 references to dispatch. */
