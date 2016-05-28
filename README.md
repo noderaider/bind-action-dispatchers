@@ -8,7 +8,7 @@
 
 ### The Code
 
-![bind-action-creators](https://raw.githubusercontent.com/cchamberlain/bind-action-dispatchers/master/public/images/bind-action-creators_lg.png)
+![bind-action-creators](https://raw.githubusercontent.com/cchamberlain/bind-action-dispatchers/master/public/images/bind-action-creators.png)
 
 
 ### Install
