@@ -1,6 +1,7 @@
 # bind-action-dispatchers
 
-**Micro library that curries and reduces the boilerplate of `bindActionCreators` and promotes better separation of concerns.**
+**Micro library that curries and reduces the boilerplate of *bindActionCreators* and promotes better separation of concerns.**
+
 
 [![NPM](https://nodei.co/npm/bind-action-dispatchers.png?stars=true&downloads=true)](https://nodei.co/npm/bind-action-dispatchers/)
 
