@@ -2,6 +2,7 @@
 
 var _redux = require('redux');
 
+/** @test {bindActionDispatchers} */
 describe('bindActionDispatchers', function () {
   var bindActionDispatchers = require('../../lib').default;
   var fooActionCreator = function fooActionCreator() {
@@ -17,14 +18,19 @@ describe('bindActionDispatchers', function () {
     return { type: 'BAR', payload: ownProps };
   };
 
+  /** @test {bindActionDispatchers} */
   it('is a function', function () {
     return expect(bindActionDispatchers).toEqual(jasmine.any(Function));
   });
+
+  /** @test {bindActionDispatchers} */
   it('is equivalent to bindActionCreators for object of functions input', function () {
     var actionCreators = { fooActionCreator: fooActionCreator, barActionCreator: barActionCreator };
     var dispatch = function dispatch() {};
     expect(JSON.stringify(bindActionDispatchers(actionCreators)(dispatch))).toEqual(JSON.stringify((0, _redux.bindActionCreators)(actionCreators, dispatch)));
   });
+
+  /** @test {bindActionDispatchers} */
   it('is equivalent to bindActionCreators for ownProps input', function () {
     var actionCreators = function actionCreators(ownProps) {
       return { fooActionCreator: fooActionCreatorWithProps(ownProps),
