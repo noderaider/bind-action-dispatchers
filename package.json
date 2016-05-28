@@ -1,6 +1,6 @@
 {
   "name": "bind-action-dispatchers",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Micro library that curries and reduces the boilerplate of `bindActionCreators` and promotes better separation of concerns.",
   "main": "lib/index.js",
   "files": [
