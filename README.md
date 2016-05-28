@@ -4,14 +4,21 @@
 
 Documentated at [bind-action-dispatchers.js.org](http://bind-action-dispatchers.js.org)
 
+
 [![NPM](https://nodei.co/npm/bind-action-dispatchers.png?stars=true&downloads=true)](https://nodei.co/npm/bind-action-dispatchers/)
 
-## Install
+
+### The Code
+
+![bind-action-creators](https://raw.githubusercontent.com/cchamberlain/bind-action-dispatchers/master/public/images/bind-action-creators_lg.png)
+
+
+### Install
 
 `npm i -S bind-action-dispatchers`
 
 
-## How to use
+### How to use
 
 **actionCreators.js - Your apps redux action creators**
 
